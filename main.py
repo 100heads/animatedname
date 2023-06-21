@@ -14,7 +14,7 @@ WINDOW_HEIGHT = 300
 WINDOW = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('My Game!')
 
-colors = [[40, 60, 200],[140, 120, 20],(239, 60, 21]]
+colors = [[40, 60, 200],[140, 120, 20],[239, 60, 21]]
 sizes = [30,30,30]
 locs = [[100,100],[140,100],[180,100]]
 letters = ['s','a','m']
@@ -39,7 +39,7 @@ def main () :
     
     # Render elements of the game
     WINDOW.fill(BACKGROUND)
-    for i in len(letters):
+    for i in range(len(letters)):
       fontObj = pygame.font.Font(None,sizes[i])
       textSurfaceObj = fontObj.render(letters[i],True,colors[i],None)
       WINDOW.blit(textSurfaceObj,locs[i])
